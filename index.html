@@ -30,6 +30,92 @@ button{padding:12px 20px;margin:10px;font-size:16px}
 </section>
 
 <section class="menu">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef Dine Restaurant - Hawally</title>
+    <style>
+        :root { --dark-green: #0f5132; --light-green: #e9f5db; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: #fdfdfd; color: #333; line-height: 1.6; }
+        header { background: var(--dark-green); color: white; padding: 40px 20px; text-align: center; }
+        .btn { display: inline-block; background: #ffc107; color: #000; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; margin: 10px 5px; border: none; cursor: pointer; }
+        section { padding: 40px 20px; max-width: 800px; margin: auto; }
+        h2 { border-bottom: 2px solid var(--dark-green); padding-bottom: 10px; color: var(--dark-green); }
+        
+        /* Menu Styling */
+        .menu-category { background: var(--light-green); padding: 10px 15px; border-radius: 5px; margin-top: 25px; font-weight: bold; }
+        .menu-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px dotted #ccc; }
+        .price { font-weight: bold; color: #0f5132; }
+
+        /* Review Styling */
+        .review-card { background: white; border: 1px solid #ddd; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .stars { color: #ffc107; font-size: 1.2rem; }
+        
+        footer { background: #222; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>CHEF DINE RESTAURANT</h1>
+    <p>Street 24, Hawally, Kuwait</p>
+    <a href="tel:+96594450238" class="btn">📞 CALL NOW</a>
+    <a href="https://maps.app.goo.gl/YourGoogleMapsLink" class="btn" style="background:white;">📍 DIRECTIONS</a>
+</header>
+
+<section id="menu">
+    <h2>Our Delicious Menu</h2>
+
+    <div class="menu-category">BREAKFAST & EGGS</div>
+    <div class="menu-item"><span>Cheese Omelette</span> <span class="price">1.250 KD</span></div>
+    <div class="menu-item"><span>Arabic Breakfast Plate</span> <span class="price">2.500 KD</span></div>
+    <div class="menu-item"><span>Shakshuka</span> <span class="price">1.500 KD</span></div>
+
+    <div class="menu-category">SANDWICHES</div>
+    <div class="menu-item"><span>Chicken Sandwich</span> <span class="price">0.750 KD</span></div>
+    <div class="menu-item"><span>Beef Burger Meal</span> <span class="price">1.750 KD</span></div>
+    <div class="menu-item"><span>Chicken Shawarma</span> <span class="price">0.600 KD</span></div>
+
+    <div class="menu-category">MAIN DISHES & GRILLS</div>
+    <div class="menu-item"><span>Half Grilled Chicken with Rice</span> <span class="price">2.250 KD</span></div>
+    <div class="menu-item"><span>Mixed Grill Plate</span> <span class="price">3.500 KD</span></div>
+    <div class="menu-item"><span>Mutton Biryani</span> <span class="price">2.750 KD</span></div>
+
+    <div class="menu-category">DRINKS</div>
+    <div class="menu-item"><span>Fresh Orange Juice</span> <span class="price">1.000 KD</span></div>
+    <div class="menu-item"><span>Karak Tea</span> <span class="price">0.150 KD</span></div>
+</section>
+
+<section id="reviews">
+    <h2>Customer Reviews</h2>
+    <div class="review-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p><strong>Thumba Kumara</strong> <small>(a week ago)</small></p>
+        <p>"Great food and excellent service!"</p>
+        <p style="color: #0f5132; font-size: 0.9em; border-left: 3px solid #0f5132; padding-left: 10px;">
+            <strong>Response from owner:</strong> Thank you so much.
+        </p>
+    </div>
+</section>
+
+<section id="location">
+    <h2>Find Us</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3478.482181710!2d48.016!3d29.339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDIwJzIwLjQiTiA0OMKwMDAnNTcuNiJF!5e0!3m2!1sen!2skw!4v1710000000000!5m2!1sen!2skw" 
+    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+<footer>
+    <p>© 2026 Chef Dine Restaurant | Hawally, Kuwait</p>
+    <p>Open Daily: 7:00 AM - 12:00 AM</p>
+</footer>
+
+</body>
+</html>
+
+
 <h2>Opening Hours</h2>
 <p>Daily: 7:00 AM – 12:00 AM</p>
 </section>
@@ -84,6 +170,7 @@ loading="lazy">
 </body>
 
 </html>
+
 
 
 
