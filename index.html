@@ -1,177 +1,171 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Chef Dine Restaurant</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body{font-family:Arial;margin:0;background:#f4f4f4}
-header{background:#0f5132;color:white;padding:20px;text-align:center}
-section{padding:30px}
-.menu{background:white;margin:20px;padding:20px;border-radius:10px}
-footer{background:#222;color:white;text-align:center;padding:15px}
-button{padding:12px 20px;margin:10px;font-size:16px}
-</style>
-</head>
-
-<body>
-
-<header>
-<h1>Chef Dine Restaurant</h1>
-<p>Street 24, Hawally – Kuwait</p>
-</header>
-
-<section>
-<h2>Welcome</h2>
-<p>Enjoy delicious breakfast, sandwiches, and grilled meals prepared fresh every day.</p>
-
-<a href="tel:+96594450238">
-<button>Call Now</button>
-</a>
-</section>
-
-<section class="menu">
-
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chef Dine Restaurant - Hawally</title>
+    <title>Chef Dine Restaurant | Hawally</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root { --dark-green: #0f5132; --light-green: #e9f5db; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: #fdfdfd; color: #333; line-height: 1.6; }
-        header { background: var(--dark-green); color: white; padding: 40px 20px; text-align: center; }
-        .btn { display: inline-block; background: #ffc107; color: #000; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; margin: 10px 5px; border: none; cursor: pointer; }
-        section { padding: 40px 20px; max-width: 800px; margin: auto; }
-        h2 { border-bottom: 2px solid var(--dark-green); padding-bottom: 10px; color: var(--dark-green); }
-        
-        /* Menu Styling */
-        .menu-category { background: var(--light-green); padding: 10px 15px; border-radius: 5px; margin-top: 25px; font-weight: bold; }
-        .menu-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px dotted #ccc; }
-        .price { font-weight: bold; color: #0f5132; }
+        :root {
+            --primary-red: #b30000; /* Professional Deep Red */
+            --dark-red: #7a0000;
+            --bg-light: #fdfdfd;
+            --text-dark: #222;
+        }
 
-        /* Review Styling */
-        .review-card { background: white; border: 1px solid #ddd; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .stars { color: #ffc107; font-size: 1.2rem; }
+        * { box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { margin: 0; background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--primary-red);
+        }
+
+        h1 { margin: 0; font-size: 2.5rem; letter-spacing: 1px; text-transform: uppercase; }
+        .tagline { font-weight: 300; margin-bottom: 20px; opacity: 0.9; }
+
+        /* Buttons */
+        .btn-container { margin-top: 20px; }
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-red);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            margin: 5px;
+            transition: 0.3s;
+            border: none;
+        }
+        .btn:hover { background-color: var(--dark-red); transform: translateY(-2px); }
+        .btn-outline { background: transparent; border: 2px solid white; }
+
+        /* Sections */
+        section { padding: 50px 20px; max-width: 900px; margin: auto; }
+        h2 { 
+            text-align: center; 
+            color: var(--primary-red); 
+            text-transform: uppercase;
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+        }
+        h2::after {
+            content: ''; display: block; width: 50px; height: 3px; 
+            background: var(--primary-red); margin: 10px auto;
+        }
+
+        /* Menu Grid */
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .menu-cat-box { background: white; padding: 20px; border-radius: 15px; border-top: 4px solid var(--primary-red); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .cat-title { color: var(--primary-red); font-weight: 700; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
         
-        footer { background: #222; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+        .item { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 0.95rem; }
+        .price { font-weight: 700; color: #444; }
+
+        /* Review Section */
+        .review-card {
+            background: #fff; padding: 25px; border-radius: 15px; 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-align: center;
+            border: 1px solid #eee;
+        }
+        .stars { color: #ffcc00; font-size: 1.4rem; margin-bottom: 10px; }
+        .owner-reply { 
+            background: #fff5f5; padding: 10px; border-radius: 8px; 
+            font-size: 0.85rem; border-left: 4px solid var(--primary-red); margin-top: 15px;
+        }
+
+        /* Footer */
+        footer { background: #1a1a1a; color: white; text-align: center; padding: 40px 20px; }
+        
+        /* Map Responsiveness */
+        .map-container { border-radius: 15px; overflow: hidden; border: 2px solid #eee; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>CHEF DINE RESTAURANT</h1>
-    <p>Street 24, Hawally, Kuwait</p>
-    <a href="tel:+96594450238" class="btn">📞 CALL NOW</a>
-    <a href="https://maps.app.goo.gl/YourGoogleMapsLink" class="btn" style="background:white;">📍 DIRECTIONS</a>
+    <h1>Chef Dine Restaurant</h1>
+    <p class="tagline">Experience the Finest Taste in Hawally</p>
+    <div class="btn-container">
+        <a href="tel:+96594450238" class="btn">📞 CALL TO ORDER</a>
+        <a href="https://wa.me/96594450238" class="btn btn-outline">💬 WHATSAPP</a>
+    </div>
 </header>
 
 <section id="menu">
-    <h2>Our Delicious Menu</h2>
+    <h2>Explore Our Menu</h2>
+    
+    <div class="menu-grid">
+        <div class="menu-cat-box">
+            <div class="cat-title">🍳 BREAKFAST & EGGS</div>
+            <div class="item"><span>Cheese Omelette</span> <span class="price">1.250 KD</span></div>
+            <div class="item"><span>Arabic Breakfast Plate</span> <span class="price">2.500 KD</span></div>
+            <div class="item"><span>Shakshuka with Cheese</span> <span class="price">1.750 KD</span></div>
+            <div class="item"><span>Boiled Eggs (3 pcs)</span> <span class="price">1.000 KD</span></div>
+        </div>
 
-    <div class="menu-category">BREAKFAST & EGGS</div>
-    <div class="menu-item"><span>Cheese Omelette</span> <span class="price">1.250 KD</span></div>
-    <div class="menu-item"><span>Arabic Breakfast Plate</span> <span class="price">2.500 KD</span></div>
-    <div class="menu-item"><span>Shakshuka</span> <span class="price">1.500 KD</span></div>
+        <div class="menu-cat-box">
+            <div class="cat-title">🍔 SANDWICHES & BURGERS</div>
+            <div class="item"><span>Chicken Sandwich</span> <span class="price">0.750 KD</span></div>
+            <div class="item"><span>Beef Burger Meal</span> <span class="price">1.750 KD</span></div>
+            <div class="item"><span>Chicken Shawarma Roll</span> <span class="price">0.600 KD</span></div>
+            <div class="item"><span>Zinger Sandwich</span> <span class="price">1.250 KD</span></div>
+        </div>
 
-    <div class="menu-category">SANDWICHES</div>
-    <div class="menu-item"><span>Chicken Sandwich</span> <span class="price">0.750 KD</span></div>
-    <div class="menu-item"><span>Beef Burger Meal</span> <span class="price">1.750 KD</span></div>
-    <div class="menu-item"><span>Chicken Shawarma</span> <span class="price">0.600 KD</span></div>
+        <div class="menu-cat-box">
+            <div class="cat-title">🍢 GRILLS & MAINS</div>
+            <div class="item"><span>Half Grilled Chicken</span> <span class="price">1.500 KD</span></div>
+            <div class="item"><span>Mixed Grill (1/2 KG)</span> <span class="price">4.500 KD</span></div>
+            <div class="item"><span>Mutton Biryani</span> <span class="price">2.750 KD</span></div>
+            <div class="item"><span>Chicken Machboos</span> <span class="price">2.250 KD</span></div>
+        </div>
 
-    <div class="menu-category">MAIN DISHES & GRILLS</div>
-    <div class="menu-item"><span>Half Grilled Chicken with Rice</span> <span class="price">2.250 KD</span></div>
-    <div class="menu-item"><span>Mixed Grill Plate</span> <span class="price">3.500 KD</span></div>
-    <div class="menu-item"><span>Mutton Biryani</span> <span class="price">2.750 KD</span></div>
-
-    <div class="menu-category">DRINKS</div>
-    <div class="menu-item"><span>Fresh Orange Juice</span> <span class="price">1.000 KD</span></div>
-    <div class="menu-item"><span>Karak Tea</span> <span class="price">0.150 KD</span></div>
+        <div class="menu-cat-box">
+            <div class="cat-title">🍹 REFRESHMENTS</div>
+            <div class="item"><span>Fresh Orange Juice</span> <span class="price">1.000 KD</span></div>
+            <div class="item"><span>Fresh Lemon Mint</span> <span class="price">1.250 KD</span></div>
+            <div class="item"><span>Karak Tea</span> <span class="price">0.150 KD</span></div>
+            <div class="item"><span>Soft Drinks</span> <span class="price">0.250 KD</span></div>
+        </div>
+    </div>
 </section>
 
 <section id="reviews">
-    <h2>Customer Reviews</h2>
+    <h2>Customer Feedback</h2>
     <div class="review-card">
-        <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p><strong>Thumba Kumara</strong> <small>(a week ago)</small></p>
-        <p>"Great food and excellent service!"</p>
-        <p style="color: #0f5132; font-size: 0.9em; border-left: 3px solid #0f5132; padding-left: 10px;">
-            <strong>Response from owner:</strong> Thank you so much.
-        </p>
+        <div class="stars">★★★★★</div>
+        <p><strong>Thumba Kumara</strong></p>
+        <p>"Great food and excellent service! Highly recommended for families."</p>
+        <div class="owner-reply">
+            <strong>Response from Chef Dine:</strong> Thank you so much for your kind words! We hope to see you again soon.
+        </div>
     </div>
 </section>
 
 <section id="location">
-    <h2>Find Us</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3478.482181710!2d48.016!3d29.339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDIwJzIwLjQiTiA0OMKwMDAnNTcuNiJF!5e0!3m2!1sen!2skw!4v1710000000000!5m2!1sen!2skw" 
-    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <h2>Find Us in Hawally</h2>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3478.4878!2d48.0163!3d29.3375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf9d268d000001%3A0x7d00000000000000!2sChef%20Dine%20Restaurant!5e0!3m2!1sen!2skw!4v1700000000000" 
+        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
 </section>
 
 <footer>
-    <p>© 2026 Chef Dine Restaurant | Hawally, Kuwait</p>
+    <p><strong>Chef Dine Restaurant</strong></p>
+    <p>Street 24, Hawally, Kuwait</p>
     <p>Open Daily: 7:00 AM - 12:00 AM</p>
+    <div style="margin-top:20px; font-size: 0.8rem; opacity: 0.6;">
+        © 2026 All Rights Reserved.
+    </div>
 </footer>
 
 </body>
 </html>
-
-
-<h2>Opening Hours</h2>
-<p>Daily: 7:00 AM – 12:00 AM</p>
-</section>
-
-<section class="menu">
-<section>
-<h2>Our Location</h2>
-<p>Street 24, Hawally – Kuwait</p>
-
-<section style="background:#f5f5f5;padding:40px;text-align:center;">
-
-<h2>Customer Reviews</h2>
-
-<h3>⭐ 5.0 / 5</h3>
-<p>Based on 3 Google reviews</p>
-
-<div style="background:white;padding:20px;margin:20px auto;max-width:500px;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,0.1);">
-
-<h4>Thumba Kumara</h4>
-
-<p>⭐⭐⭐⭐⭐</p>
-
-<p>a week ago</p>
-
-<p>Great food and excellent service!</p>
-
-<p style="color:green;">Owner Response: Thank you so much.</p>
-
-</div>
-
-<a href="https://www.google.com/search?q=chef+dine+restaurant+hawally" target="_blank">
-<button style="padding:12px 25px;font-size:16px;">Write a Review</button>
-</a>
-
-</section>
-  
-<iframe 
-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6956.183429179208!2d47.99768759357909!3d29.33830779999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf9d8bf5b5a8d1%3A0xe5ce94094d8191ad!2sCHEF%20DINE%20RESTAURANT!5e0!3m2!1sen!2skw!4v1773160006066!5m2!1sen!2skw"
-width="100%" 
-height="350" 
-style="border:0;" 
-allowfullscreen="" 
-loading="lazy">
-</iframe>
-
-</section>
-
-<footer>
-<p>© Chef Dine Restaurant</p>
-</footer>
-
-</body>
-
-</html>
-
-
-
-
-
